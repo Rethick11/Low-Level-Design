@@ -9,10 +9,12 @@ import problems.RuleEngine.services.Violation;
 public class RuleEngine {
     private final List<Expense> expenseList;
     private final Map<ExpenseType, List<ExpenseRule>> rules;
-
-    public RuleEngine(List<Expense> expenseList) {
+    private final Map<String, List<Expense>> tripExpenses;
+    
+    public RuleEngine(List<Expense> expenseList, Map<String, List<Expense>> tripExpenses) {
         this.expenseList = expenseList;
         this.rules = RuleRegistry.getRules();
+        this.tripExpenses = tripExpenses;
     }
 
     public List<Optional<Violation>> run(){
