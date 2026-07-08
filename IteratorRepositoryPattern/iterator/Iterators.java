@@ -2,10 +2,11 @@ package IteratorRepositoryPattern.iterator;
 import java.util.List;
 
 import IteratorRepositoryPattern.repository.UserRepository;
-public class Iterator implements IIterator<List<String>> {
+public class Iterators implements IIterator<List<String>> {
     private int limit, offset , size;
     private UserRepository userRepo;
     private List<String> current;
+
     public Iterator(){
         this.limit = 1;
         this.offset = 1;

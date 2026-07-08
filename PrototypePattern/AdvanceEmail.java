@@ -18,6 +18,7 @@ public class AdvanceEmail extends EmailService {
     }
 
     
+    @Override
     public AdvanceEmail copy() {
         return new AdvanceEmail(this);
     }
